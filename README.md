@@ -1,5 +1,5 @@
 ***********************************************************************************************************************************************************************
 
-Task: Create a Jenkins pipeline that pulls the code from your GitHub repo and then builds the docker image and pushes it to the ECR and Deploy it to EKS.
+Task: Create a Jenkins pipeline that pulls the code from your GitHub repo and then builds the docker image and pushes it to the ECR and Deploy it to EKS..
 
 ***********************************************************************************************************************************************************************
