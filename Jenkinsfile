@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         AWS_REGION = "ap-south-1"
-        ECR_REPO = "457271242919.dkr.ecr.ap-south-1.amazonaws.com/my-repo"
+        ECR_REPO = "300601068948.dkr.ecr.ap-south-1.amazonaws.com/jenkins_repo"
         IMAGE_TAG = "latest"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/akhileshgopal/demo-app.git'
+                git branch: 'main', url: 'https://github.com/greyknight28/jenkins-cicd.git'
             }
         }
 
@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    aws eks update-kubeconfig --name ak --region $AWS_REGION
+                    aws eks update-kubeconfig --name my_eks_cluster --region $AWS_REGION
                     kubectl apply -f Deployment.yaml
                     '''
                 }
